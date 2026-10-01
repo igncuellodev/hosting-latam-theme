@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+:root {
+  --color-white: #fafafa;
+  --light-purple: #5969ff;
+  --transparent-purple: #eef0ff;
+  --dark-blue: #001c49;
+  --text-76: clamp(3rem, 6vw, 4.75rem);
+  --text-36: clamp(1.75rem, 3.5vw, 2.25rem);
+  --text-24: clamp(1.25rem, 2.5vw, 1.5rem);
+  --text-20: clamp(1.125rem, 2vw, 1.25rem);
+}
+
+* {
+  font-family: "Satoshi";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-white);
+}
+
+.method-wrapper {
+  margin-top: 50px;
+  height: fit-content;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-pago {
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    var(--dark-blue) 0%,
+    var(--light-purple) 96.56%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: fit-content;
+  padding: 0.4rem;
+  line-height: 112%;
+  font-size: var(--text-76);
+}
+
+.payment-methods {
+  width: 100%;
+  max-width: 1186px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 128px;
+  gap: 2rem;
+}
+
+.method-card {
+  height: 273px;
+  border-radius: 1.25rem;
+  background: var(--color-white);
+  box-shadow: 0 0 29.4px 0 rgba(0, 0, 0, 0.08);
+  padding: 1.375rem;
+}
+
+.method-icon {
+  height: 63px;
+  width: 63px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--transparent-purple);
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.method-card-title {
+  font-size: var(--text-24);
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    var(--dark-blue) 0%,
+    var(--light-purple) 96.56%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.method-card-text {
+  font-size: var(--text-20);
+  font-weight: 500;
+}
+
+.transfer-data {
+  height: fit-content;
+  width: 100%;
+  max-width: 1186px;
+  margin-top: 32px;
+  border-radius: 1.25rem;
+  background: var(--White-white-500, #fafafa);
+  box-shadow: 0 0 29.4px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  overflow: visible;
+}
+
+.left-data-title {
+  font-size: var(--text-36);
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    var(--dark-blue) 0%,
+    var(--light-purple) 96.56%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.data-list {
+  margin-top: 32px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dato {
+  font-size: var(--text-20);
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.right-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media (max-width: 1245px) {
+  .method-wrapper {
+    margin-top: 50px;
+    padding: 2rem;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .transfer-data {
+    flex-direction: column;
+    height: fit-content;
+    gap: 48px;
+  }
+
+  .right-data {
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 700px) {
+  .method-wrapper {
+    margin-top: 50px;
+    padding: 6rem 1rem;
+  }
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  .method-card {
+    height: fit-content;
+  }
+
+  .transfer-data {
+    height: fit-content;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .right-data {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .santander-logo {
+    width: 200px;
+  }
+
+  .webpay-logo {
+    width: 200px;
+  }
+}
